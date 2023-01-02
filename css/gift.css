@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background: url(/image/h.jpg);
+  object-fit: cover;
+  background-position: center;
+  background-position-x: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+img {
+  width: 200px;
+  animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+.gift-container {
+  position: fixed;
+}
+
+p {
+  font-size: 1.125rem;
+  color: white;
+  font-family: "Mukta", sans-serif;
+  font-weight: bold;
+  position: fixed;
+  z-index: 20;
+  margin-top: 140px;
+}
+
+@keyframes tilt-n-move-shaking {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5px, 5px) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+  75% {
+    transform: translate(-5px, 5px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  img {
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  p {
+    margin-top: 180px;
+  }
+}
